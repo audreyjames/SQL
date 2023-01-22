@@ -1,0 +1,32 @@
+-- Create a Coffee Shop Database
+
+CREATE TABLE coffee_shop (id INTEGER PRIMARY KEY, brand TEXT, name TEXT, strength INTEGER, weight INTEGER, location TEXT, price INTEGER);
+
+INSERT INTO coffee_shop VALUES(1, "Leivas", "Abuela Reina", 3, 12, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(2, "Leivas", "Abuelo Fuerte", 5, 12, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(3, "Leivas", "Caffe Di Sabores", 2, 12, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(4, "Leivas", "Breakfast Blend", 3, 12, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(5, "Leivas", "Espresso Blend", 3, 12, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(6, "Leivas", "Dark Roast", 5, 2, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(7, "Onyx Coffee Lab", "Southern Weather", 5, 10, "columbia", 17.50);
+INSERT INTO coffee_shop VALUES(8, "Onyx Coffee Lab", "Geometry", 4, 10, "columbia", 18.50);
+INSERT INTO coffee_shop VALUES(9, "Onyx Coffee Lab", "Monarch", 3, 10, "columbia", 18.00);
+INSERT INTO coffee_shop VALUES(10, "Onyx Coffee Lab", "Tropical Weather", 3, 10, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(11, "Onyx Coffee Lab", "Power Nap", 5, 10, "columbia", 21.00);
+INSERT INTO coffee_shop VALUES(12, "Onyx Coffee Lab", "Honduras Benjamin Paz Gesha Coe #1", 5, 10, "Gesha", 210.00);
+INSERT INTO coffee_shop VALUES(13, "Onyx Coffee Lab", "Long Road Home", 5, 10, "columbia", 25.00);
+INSERT INTO coffee_shop VALUES(14, "Onyx Coffee Lab", "Colombia Inza Robinson Pillimue", 3, 10, "columbia", 23.00);
+INSERT INTO coffee_shop VALUES(15, "Onyx Coffee Lab", "Framily", 2, 10, "columbia", 25.00);
+INSERT INTO coffee_shop VALUES(16, "Onyx Coffee Lab", "Krampus", 5, 10, "kenya", 25.00);
+
+-- Display the database ordered by strength
+SELECT * FROM coffee_shop ORDER BY strength;
+
+-- Display the database ordered by price
+SELECT * FROM coffee_shop ORDER BY price;
+
+-- What is the average price of a bag of coffee?
+SELECT avg(price) FROM coffee_shop;
+
+-- What is the most common strength of coffee carried at the store?
+SELECT strength, count(strength) FROM coffee_shop GROUP BY strength;
