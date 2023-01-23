@@ -1,0 +1,113 @@
+/* Create table about the people and what they do here */
+
+-- Create a table that displays the ranking, name, whether they are living or deceased, hometown, and the state or country of the top 20 artists from Rolling Stones "The 200 Greatest Singers of All Time" list. 
+
+CREATE TABLE hometowns (
+    ranking INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    living_deceased TEXT,
+    hometown TEXT,
+    state_country TEXT);
+
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Aretha Franklin", "Deceased", "Memphis", "TN");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Whitney Houston", "Deceased","Newark", "NJ");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Sam Cooke","Deceased", "Clarksdale", "MI");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Billie Holiday","Deceased", "Philadelphia", "PA");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Mariah Carey", "Living", "Huntington", "NY");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Ray Charles", "Deceased", "Albany", "GA");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Stevie Wonder", "Living", "Saginaw", "MI");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Beyonce", "Living", "Houston", "TX");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Otis Redding", "Deceased", "Dawson", "GA");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Al Green", "Living", "Forrest City", "AR");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Little Richard", "Deceased", "Macon", "GA");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("John Lennon", "Deceased", "Liverpool", "England");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Patsy Cline", "Deceased","Winchester", "VA");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Freddie Mercury", "Deceased", "Stone Town", "Zanzibar");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Bob Dylan", "Living", "Duluth", "MN");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Prince", "Deceased", "Minneapolis", "MN");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Elvis Presley", "Deceased", "Tupelo", "MS");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Celia Cruz", "Deceased", "Havana", "Cuba");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Frank Sinatra", "Deceased", "Hoboken", "NJ");
+INSERT INTO hometowns (name, living_deceased, hometown, state_country) VALUES ("Marvin Gaye", "Deceased", "Washington", "DC");
+
+-- Create a list of the top 20 artists and the genres that their music fell into
+CREATE TABLE genres (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    ranking INTEGER,
+    genre TEXT);
+
+INSERT INTO genres (name, ranking, genre) VALUES ("Aretha Franklin",1,"Soul");
+INSERT INTO genres (name, ranking, genre) VALUES ("Whitney Houston", 2,"R&B");
+INSERT INTO genres (name, ranking, genre) VALUES ("Sam Cooke", 3,"Soul");
+INSERT INTO genres (name, ranking, genre) VALUES ("Billie Holiday", 4,"Jazz");
+INSERT INTO genres (name, ranking, genre) VALUES ("Mariah Carey", 5,"R&B");
+INSERT INTO genres (name, ranking, genre) VALUES ("Ray Charles", 6,"R&B");
+INSERT INTO genres (name, ranking, genre) VALUES ("Stevie Wonder", 7,"Soul");
+INSERT INTO genres (name, ranking, genre) VALUES ("Beyonce",8, "R&B");
+INSERT INTO genres (name, ranking, genre) VALUES ("Otis Redding",9, "Soul");
+INSERT INTO genres (name, ranking, genre) VALUES ("Al Green",10, "Soul");
+INSERT INTO genres (name, ranking, genre) VALUES ("Little Richard",11, "Rock and Roll");
+INSERT INTO genres (name, ranking, genre) VALUES ("John Lennon",12, "Rock and Roll");
+INSERT INTO genres (name, ranking, genre) VALUES ("Patsy Cline",13, "Country");
+INSERT INTO genres (name, ranking, genre) VALUES ("Freddie Mercury",14, "Rock and Roll");
+INSERT INTO genres (name, ranking, genre) VALUES ("Bob Dylan", 15,"Folk");
+INSERT INTO genres (name, ranking, genre) VALUES ("Prince",16, "Funk");
+INSERT INTO genres (name, ranking, genre) VALUES ("Elvis Presley",17, "Rock and Roll");
+INSERT INTO genres (name, ranking, genre) VALUES ("Celia Cruz", 18,"Salsa");
+INSERT INTO genres (name, ranking, genre) VALUES ("Frank Sinatra", 19,"Big Band");
+INSERT INTO genres (name, ranking, genre) VALUES ("Marvin Gaye", 20,"R&B");
+
+
+--Create a table of the artists name, id, date of their passing, and the cause of their passing.
+CREATE TABLE deaths (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    artist_id INTEGER,
+    date TEXT,
+    cause TEXT);
+
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Marvin Gaye",20, "April 1, 1984", "Gunshot wounds to the heart and left shoulder");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Frank Sinatra",19, "May 14, 1998", "Heart attack");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Celia Cruz",18, "July 16, 2003", "Breast Cancer");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Elvis Presley",17, "August 16, 1977", "Cardiac arrest");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Prince", 16, "April 21, 2016", "Fentanyl overdose");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Freddie Mercury",14, "November 24, 1991", "Bronchopneumonia as a complication os AIDS");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Patsy Cline",13, "March 5, 1963", "Plane crash");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("John Lennon",12, "December 8, 1980", "Gunshot wounds");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Little Richard",11, "May 9, 2020", "Complications due to bone cancer");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Otis Redding",9, "December 10, 1967" ,"Plane crash");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Ray Charles",6, "June 10, 2004", "Complications of liver failure");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Billie Holiday",4, "July 17, 1959", "Cirrohsis");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Sam Cooke",3, "December 11, 1964", "Gunshot wound to the chest");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Whitney Houston",2, "February 11, 2012", "Drowning");
+INSERT INTO deaths (name, artist_id, date, cause) VALUES ("Aretha Franklin",1, "August 16, 2018", "Pancreatic cancer");
+
+-- Display artists with hometown, state(or country) and the genre that they performed
+
+SELECT h.name, h.hometown, h.state_country, g.genre
+    FROM hometowns AS h
+       LEFT OUTER JOIN genres AS g
+         ON h.name=g.name
+    ORDER BY g.genre;
+
+-- Display all artists who have passed away from cancer
+
+SELECT h.name, d.date, d.cause
+    FROM hometowns AS h
+      JOIN deaths AS d
+         ON d.artist_id=h.ranking
+    WHERE d.cause LIKE "%cancer%"
+    ORDER BY h.name;
+
+--Display all R&B and Soul artists that have passed away along with their rankings
+
+SELECT h.ranking, h.name, g.genre
+    FROM hometowns AS h
+        JOIN genres AS g
+            ON h.ranking=g.id
+        JOIN deaths AS d
+            ON h.ranking=d.artist_id
+    WHERE g.genre = "Soul" OR g.genre = "R&B"
+    ORDER BY g.genre;
+    
