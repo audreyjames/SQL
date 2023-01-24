@@ -57,3 +57,10 @@ SELECT count(distinct customer.acctnum), avg(quantity*price)
     WHERE quantity>2
         AND length(orderid)=6
         AND orderid<> 'Order ID';
+        
+        
+/*List all the products sold in Los Angeles in February and include how many of each were sold*/
+
+SELECT product, quantity
+    FROM BIT_DB.FebSales
+    WHERE location LIKE '%Los Angeles%';
