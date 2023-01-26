@@ -1,0 +1,71 @@
+/* Ideas for questions to analyze in this data
+    1. Show customers names, ID, and country - who aren't in the US
+    2. What genre has the most tracks?
+    3. Show the employees who work in IT
+    4. How many invoices were there in 2009?
+    5. Write a query that includes the purchased track anem with each invoice line ID.
+    6. Provide a query that shows all the Tracks, and include the Album name, Media type and Genre.
+    7. Show the total sales made by each sales agent.
+*/
+    
+/* Show customers names, ID, and country - who aren't in the US*/
+
+SELECT FirstName, LastName, CustomerId, country
+    FROM customers
+    WHERE country <> 'USA'
+    ORDER BY country;
+    
+/*What genre has the most tracks?*/
+
+SELECT g.name, count(*) as 'amount'
+    FROM tracks t
+        LEFT OUTER JOIN genres g
+        ON t.Genreid = g.GenreId
+    GROUP BY g.name    
+    ORDER BY g.name;
+    
+/* 3. Show the employees who work in IT*/
+
+SELECT firstname, lastname, title, employeeid
+    FROM employees
+    WHERE title LIKE '%IT%';
+    
+/*4. How many invoices were there in 2009?*/
+
+SELECT count(*) as 'Number of Invoices in 2009'
+    FROM invoices
+    WHERE InvoiceDate LIKE "%2009%";
+    
+/*5. Write a query that includes the purchased track name with each invoice line ID.*/
+
+SELECT i.invoiceid, t.name
+    FROM invoice_items i
+        LEFT OUTER JOIN tracks t
+        ON t.Trackid = i.trackid;
+        
+/*6. Provide a query that shows all the Tracks, and include the Album name, Media type and Genre.*/
+
+SELECT t.name,a.title as 'Album Name', m.name as 'Media Type', g.name AS 'Genre'
+    FROM tracks t
+    JOIN albums a
+    ON t.albumid=a.albumid
+    JOIN media_types m
+    ON t.MediaTypeid=m.MediaTypeid
+    JOIN genres g
+    ON t.genreid=g.genreid;
+    
+/*7. Show the total sales made by each sales agent.*/
+
+SELECT emp.FirstName, emp.LastName,
+ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
+FROM chinook.Employees emp
+
+JOIN chinook.Customers cust 
+ON cust.SupportRepId = emp.EmployeeId
+
+JOIN chinook.Invoices Inv 
+ON Inv.CustomerId = cust.CustomerId
+
+WHERE emp.Title = 'Sales Support Agent' 
+GROUP BY emp.FirstName;
+
