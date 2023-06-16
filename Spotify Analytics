@@ -1,6 +1,6 @@
 /* For this project, I used Spotify data that I downloaded from Kaggle.
 I then created a table to insert the Spotify data into. 
-Finally, I analyzed teh data using SQL*/
+Finally, I analyzed the data using SQL*/
 
 CREATE TABLE BIT_DB.Spotifydata (
 id integer PRIMARY KEY,
