@@ -1,6 +1,6 @@
 # SQL Projects Portfolio
 
-Welcome to my SQL Projects Portfolio! This repository contains a collection of SQL projects that demonstrate my abilities in database management, data analysis, and SQL programming.
+Welcome to my SQL Projects Portfolio! The repo includes some of the projects done in working with databases, data analysis, and SQL programming.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Welcome to my SQL Projects Portfolio! This repository contains a collection of S
 
 ## Introduction
 
-This repository is a showcase of various SQL projects I've worked on. Each project is designed to highlight different aspects of SQL and database management, ranging from basic queries to complex data manipulations and performance optimizations. The goal is to provide a comprehensive look at my skills and capabilities in working with SQL.
+This repository is a showcase of the several projects that I have undertaken using SQL. The projects exhibited here present various aspects of SQL and database management in basic queries, complex data manipulations, and performance optimizations. All of this is to give you an overview of my skills and abilities in working with SQL overall.
 
 ## Projects
 
@@ -48,16 +48,12 @@ This repository is a showcase of various SQL projects I've worked on. Each proje
 
 [Link to detailed project documentation]
 
-## Skills Demonstrated
-
-- Data Modeling
-- Complex Joins and Subqueries
-- Indexing and Performance Tuning
-- Stored Procedures and Functions
-- Transaction Management
-- Data Warehousing and ETL Processes
-- Data Analysis and Reporting
+## Skills Proven
+Data Modeling
+Complex Joins and Subqueries
+Indexing and Tuning Performance
+Stored procedures are a way to encapsulate Transaction Management Data Warehousing and ETL Processes Data Analysis and Reporting
 
 ## Contact
 
-If you have any questions or would like to get in touch, feel free to reach out via [email@example.com](mailto:email@example.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile).
+Should you have any questions or wish to get in touch, you can mail me at example@example.com or link up with me on LinkedIn.
