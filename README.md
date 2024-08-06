@@ -52,7 +52,7 @@ This repository is a showcase of the several projects that I have undertaken usi
 
 **Files:**
 
-[SQL Fortune 500 Companies Analysis]([https://github.com/audreyjames/SQL-Fortune-500-Companies-Analysis](https://github.com/audreyjames/SQL/blob/main/fortune_companies_analysis.sql))
+[SQL Fortune 500 Companies Analysis](https://github.com/audreyjames/SQL/blob/main/fortune_companies_analysis.sql)
 
 ### Project 3: [Project Name]
 
