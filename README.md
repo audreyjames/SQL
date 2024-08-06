@@ -7,7 +7,7 @@ Welcome to my SQL Projects Portfolio! The repo includes some of the projects don
 - [Introduction](#introduction)
 - [Projects](#projects)
   - [Project 1: [SQL Superstore Analysis]](#project-1-SQL-Superstore-Analysis)
-  - [Project 2: [Project Name]](#project-2-project-name)
+  - [Project 2: [SQL Fortune 500 Companies Analysis]](#project-2-SQL-Fortune-500-Companies-Analysis)
   - [Project 3: [Project Name]](#project-3-project-name)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Contact](#contact)
@@ -35,7 +35,7 @@ This repository is a showcase of the several projects that I have undertaken usi
 
 [SQL Superstore Analysis](https://github.com/audreyjames/SQL/blob/main/SQL%20Superstore%20Analysis)
 
-### Project 1: SQL Fortune 500 Companies Analysis
+### Project 2: SQL Fortune 500 Companies Analysis
 
 **Description:** This project involves creating and managing a database for a set of Fortune 500 companies. It includes the creation of a `fortune_companies` table with various attributes for companies, inserting data into the table, and performing various queries to retrieve and analyze the data. The purpose of this project is to demonstrate basic to intermediate SQL skills including table creation, data insertion, and data retrieval using SELECT queries with different clauses and functions.
 
