@@ -20,16 +20,16 @@ This repository is a showcase of the several projects that I have undertaken usi
 
 ### Project 1: SQL Superstore Analysis
 
-Overview:
-This project involves creating and managing a SQL database for a superstore. It includes creating a table, inserting data, and performing various queries to demonstrate database management, data analysis, and SQL programming skills. The purpose of this project is to showcase the ability to handle SQL operations, including data insertion, querying, and aggregation.
+**Description:** This project involves creating and managing a simple database for a hypothetical superstore. It includes the creation of a `superstore` table with various attributes for items, inserting data into the table, and performing various queries to retrieve and analyze the data. The purpose of this project is to demonstrate basic SQL skills including table creation, data insertion, and data retrieval using SELECT queries with different clauses and functions.
 
-Skills:
-
-Data Modeling: Creating and structuring the superstore table with appropriate data types and constraints.
-Complex Joins and Subqueries: Demonstrating the ability to perform complex queries on the superstore table.
-Data Analysis and Reporting: Using SQL queries to analyze data and generate meaningful reports.
-Aggregation Functions: Utilizing functions like SUM, AVG, MIN, MAX, and COUNT for data aggregation.
-Ordering and Filtering: Using ORDER BY and WHERE clauses to sort and filter data.
+**Skills:**
+- **Table Creation:** Creating a table with specified columns and data types.
+- **Data Insertion:** Inserting multiple rows of data into a table.
+- **Basic Queries:** Retrieving all data from a table.
+- **Ordering Data:** Ordering the retrieved data by a specific column.
+- **Aggregation Functions:** Using functions like `AVG()`, `SUM()`, `MIN()`, and `MAX()` to perform calculations on the data.
+- **Grouping Data:** Counting the number of items in each category using `GROUP BY`.
+- **Rounding Numbers:** Using the `ROUND()` function to format the output of numerical data.
 
 **Files:** 
 
