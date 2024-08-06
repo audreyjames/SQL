@@ -6,7 +6,7 @@ Welcome to my SQL Projects Portfolio! The repo includes some of the projects don
 
 - [Introduction](#introduction)
 - [Projects](#projects)
-  - [Project 1: [Project Name]](#project-1-project-name)
+  - [Project 1: [SQL Superstore Analysis]](#project-1-SQL-Superstore-Analysis)
   - [Project 2: [Project Name]](#project-2-project-name)
   - [Project 3: [Project Name]](#project-3-project-name)
 - [Skills Demonstrated](#skills-demonstrated)
@@ -33,7 +33,7 @@ Ordering and Filtering: Using ORDER BY and WHERE clauses to sort and filter data
 
 **Files:** 
 
-[SQL Superstore Analysis]( )
+[SQL Superstore Analysis](https://github.com/audreyjames/SQL/blob/main/SQL%20Superstore%20Analysis)
 
 ### Project 2: [Project Name]
 
