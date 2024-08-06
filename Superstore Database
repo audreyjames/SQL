@@ -1,4 +1,3 @@
-
 -- Create the superstore table
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
