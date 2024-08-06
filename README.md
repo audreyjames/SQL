@@ -33,7 +33,7 @@ Ordering and Filtering: Using ORDER BY and WHERE clauses to sort and filter data
 
 **Files:** 
 
-[SQL Superstore Analysis]
+[SQL Superstore Analysis](#SQL_Superstore_Analysis)
 
 ### Project 2: [Project Name]
 
