@@ -35,15 +35,24 @@ This repository is a showcase of the several projects that I have undertaken usi
 
 [SQL Superstore Analysis](https://github.com/audreyjames/SQL/blob/main/SQL%20Superstore%20Analysis)
 
-### Project 2: [Project Name]
+### Project 1: SQL Fortune 500 Companies Analysis
 
-**Description:** A brief overview of the project, including its purpose and what it demonstrates.
+**Description:** This project involves creating and managing a database for a set of Fortune 500 companies. It includes the creation of a `fortune_companies` table with various attributes for companies, inserting data into the table, and performing various queries to retrieve and analyze the data. The purpose of this project is to demonstrate basic to intermediate SQL skills including table creation, data insertion, and data retrieval using SELECT queries with different clauses and functions.
 
-**Skills:** List of skills demonstrated in this project (e.g., indexing, stored procedures, transaction management, etc.)
+**Skills:**
+- **Table Creation:** Creating a table with specified columns and data types.
+- **Data Insertion:** Inserting multiple rows of data into a table.
+- **Basic Queries:** Retrieving all data from a table.
+- **Ordering Data:** Ordering the retrieved data by a specific column.
+- **Aggregation Functions:** Using functions like `AVG()`, `SUM()`, `MIN()`, and `MAX()` to perform calculations on the data.
+- **Grouping Data:** Counting the number of companies in each revenue group using `GROUP BY` and `CASE` statements.
+- **Filtering Data:** Using logical operators like `AND` and `OR` to filter data based on specific conditions.
+- **Having Clause:** Using the `HAVING` clause to filter groups based on aggregate values.
+- **Rounding Numbers:** Using the `ROUND()` function to format the output of numerical data.
 
-**Files:** List of files associated with this project.
+**Files:**
 
-[Link to detailed project documentation]
+[SQL Fortune 500 Companies Analysis](https://github.com/audreyjames/SQL-Fortune-500-Companies-Analysis)
 
 ### Project 3: [Project Name]
 
