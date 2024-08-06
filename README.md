@@ -18,15 +18,22 @@ This repository is a showcase of the several projects that I have undertaken usi
 
 ## Projects
 
-### Project 1: [Project Name]
+### Project 1: SQL Superstore Analysis
 
-**Description:** A brief overview of the project, including its purpose and what it demonstrates.
+Overview:
+This project involves creating and managing a SQL database for a superstore. It includes creating a table, inserting data, and performing various queries to demonstrate database management, data analysis, and SQL programming skills. The purpose of this project is to showcase the ability to handle SQL operations, including data insertion, querying, and aggregation.
 
-**Skills:** List of skills demonstrated in this project (e.g., data modeling, complex joins, subqueries, etc.)
+Skills:
 
-**Files:** List of files associated with this project.
+Data Modeling: Creating and structuring the superstore table with appropriate data types and constraints.
+Complex Joins and Subqueries: Demonstrating the ability to perform complex queries on the superstore table.
+Data Analysis and Reporting: Using SQL queries to analyze data and generate meaningful reports.
+Aggregation Functions: Utilizing functions like SUM, AVG, MIN, MAX, and COUNT for data aggregation.
+Ordering and Filtering: Using ORDER BY and WHERE clauses to sort and filter data.
 
-[Link to detailed project documentation]
+**Files:** 
+
+[SQL Superstore Analysis]
 
 ### Project 2: [Project Name]
 
