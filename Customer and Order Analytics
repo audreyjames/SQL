@@ -1,110 +1,50 @@
-/*1. How many orders were placed in January?*/
 
-SELECT count(*) 
-    FROM BIT_DB.JanSales
-    WHERE length(orderid)=6
-        AND orderid<> 'Order ID';
+-- Create the superstore table
+CREATE TABLE superstore (
+    item_id INTEGER PRIMARY KEY,
+    item_name TEXT,
+    category TEXT,
+    price DECIMAL(10, 2),
+    stock_quantity INTEGER,
+    average_rating DECIMAL(3, 2)
+);
 
-/*2. How many of these orders were for an iPhone?*/
+-- Insert data into the superstore table
+INSERT INTO superstore (item_id, item_name, category, price, stock_quantity, average_rating)
+VALUES
+    (1, 'Stainless Steel Cookware Set', 'Kitchen Supplies', 89.99, 50, 4.6),
+    (2, 'Memory Foam Mattress', 'Furnishings', 499.99, 30, 4.8),
+    (3, 'Smart LED TV', 'Electronics', 549.00, 20, 4.5),
+    (4, 'Robot Vacuum Cleaner', 'Appliances', 199.50, 40, 4.3),
+    (5, 'Wireless Bluetooth Speaker', 'Electronics', 39.99, 60, 4.2),
+    (6, 'Non-Stick Baking Set', 'Kitchen Supplies', 29.95, 80, 4.4),
+    (7, 'Cotton Bedding Set', 'Furnishings', 89.00, 25, 4.7),
+    (8, 'Smart Home Security Camera', 'Electronics', 79.95, 15, 4.1),
+    (9, 'Air Purifier', 'Appliances', 129.50, 35, 4.6),
+    (10, 'Premium Coffee Maker', 'Kitchen Supplies', 79.99, 50, 4.9),
+    (11, 'Ergonomic Office Chair', 'Furnishings', 189.00, 20, 4.5),
+    (12, 'Wireless Earbuds', 'Electronics', 49.99, 75, 4.3),
+    (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
+    (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
+    (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
-SELECT count(*) 
-    FROM BIT_DB.JanSales
-    WHERE Product="iPhone"
-        AND length(orderid)=6
-        AND orderid<> 'Order ID';
-    
-/*3. Select the customer account numbers for all the orders that were placed in February.*/
+-- Query to order the items by price
+SELECT * FROM superstore
+ORDER BY price;
 
-SELECT distinct acctnum
-    FROM BIT_DB.customers customers
-        INNER JOIN BIT_DB.FebSales feb
-        ON customers.order_id=feb.orderid
-    WHERE length(orderid)=6
-        AND orderid<> 'Order ID';
-        
-/*4. Which product was the cheapest one sold in January, and what was the price?*/
+-- Query to show the average price of items rounded to 2 decimal places
+SELECT ROUND(AVG(price), 2) AS average_price FROM superstore;
 
-SELECT product, price
-    FROM BIT_DB.JanSales
-    ORDER BY price 
-    LIMIT 1;
-    
-/*5. What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).*/
+-- Query to show statistics about the price for items in the category of "Kitchen Supplies" rounded to 2 decimal places
+SELECT 
+    ROUND(SUM(price), 2) AS total_price,
+    ROUND(AVG(price), 2) AS average_price,
+    ROUND(MIN(price), 2) AS minimum_price,
+    ROUND(MAX(price), 2) AS maximum_price
+FROM superstore
+WHERE category = 'Kitchen Supplies';
 
-SELECT product, sum(quantity)*price AS revenue
-    FROM BIT_DB.JanSales
-    GROUP BY product;
-    
-/*6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?*/
-
-SELECT product, quantity, sum(quantity)*price as revenue
-    FROM BIT_DB.FebSales
-    WHERE location = "548 Lincoln St, Seattle, WA 98101"
-    GROUP BY product;
-    
-/*7. How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?*/
-
-SELECT count(distinct customer.acctnum), avg(quantity*price)
-    FROM BIT_DB.FebSales feb
-        LEFT JOIN BIT_DB.customers customer
-        ON feb.orderID = customer.order_id
-    WHERE quantity>2
-        AND length(orderid)=6
-        AND orderid<> 'Order ID';
-        
-/*8. List all the products sold in Los Angeles in February and include how many of each were sold*/
-
-SELECT product, sum(quantity)
-    FROM BIT_DB.FebSales
-    WHERE location LIKE '%Los Angeles%'
-    GROUP BY product;
-    
-/*9. Which locations in New York received at least 3 orders in January, and how many orders did they each receive?*/
-
-SELECT distinct location, count(orderid)
-    FROM BIT_DB.JanSales
-    WHERE location LIKE "%New York%"
-        AND length(orderid)=6
-        AND orderid<> 'Order ID'
-    GROUP BY location
-    HAVING count(orderid)>2
-    ORDER BY location;
-    
-
-/*10. How many of each type of headphone were sold in February?*/
-
-SELECT distinct product, count(quantity) quantity
-    FROM BIT_DB.FebSales
-    WHERE product LIKE "%headphone%"
-    GROUP BY product;
-    
-
-/*11. What was the average amount spent per account in February? */
-
-SELECT avg(price*quantity)
-    FROM BIT_DB.FebSales feb
-        LEFT JOIN BIT_DB.customers cust
-        ON cust.order_id=Feb.orderid
-    WHERE length(orderid) = 6
-        AND orderid <> "Order ID";
-
-
-/*12. What was the average quantity of products purchased per account in February?*/
-
-SELECT ROUND(avg(quantity))
-    FROM BIT_DB.FebSales feb
-        INNER JOIN BIT_DB.customers cust
-        ON cust.order_id=feb.orderid
-    WHERE length(orderid) = 6
-        AND orderid <> "Order ID";
-
-
-/*13. Which product brought in the most revenue in January and how much revenue did it bring in total?*/
-
-SELECT product, sum(quantity*price) revenue
-    FROM BIT_DB.JanSales
-    WHERE length(orderid) = 6
-        AND orderid<> "Order ID"    
-GROUP BY product
-ORDER BY revenue desc
-LIMIT 1;
+-- Query to count the number of items in each category
+SELECT category, COUNT(*) AS item_count
+FROM superstore
+GROUP BY category;
